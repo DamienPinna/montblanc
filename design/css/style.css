@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@500&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+main {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 70% 1fr 2fr;
+  grid-template-rows: 15vh 20vh 1fr;
+}
+
+nav {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-color: red;
+  display: flex;
+  align-items: center;
+}
+nav .logo {
+  width: 20%;
+  min-width: 20.5rem;
+  transform: translateY(-1rem);
+  margin-left: 6.4rem;
+}
+nav ul {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Reem Kufi Fun", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+.gold {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: yellow;
+  background-image: url(../../images/bg_gold.png);
+  background-position: center;
+}
+
+.content {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: green;
+}
+
+.stat {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  background-color: black;
+}
+
+/*# sourceMappingURL=style.css.map */

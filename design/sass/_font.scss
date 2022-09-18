@@ -1,0 +1,11 @@
+@mixin googleFonts($font) {
+  @import url("https://fonts.googleapis.com/css2?family=#{$font}&display=swap");
+}
+
+$fontsList: "Reem+Kufi+Fun:wght@500";
+
+@each $font in $fontsList {
+  @include googleFonts($font);
+}
+
+// font-family: 'Reem Kufi Fun', sans-serif;
