@@ -2,10 +2,12 @@
   @import url("https://fonts.googleapis.com/css2?family=#{$font}&display=swap");
 }
 
-$fontsList: "Reem+Kufi+Fun:wght@500";
+$fontsList: "Reem+Kufi+Fun:wght@500", "Montserrat", "Mukta:wght@500;600;700;800";
 
 @each $font in $fontsList {
   @include googleFonts($font);
 }
 
 // font-family: 'Reem Kufi Fun', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Mukta', sans-serif;
