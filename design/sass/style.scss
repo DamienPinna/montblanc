@@ -69,16 +69,6 @@ nav {
   }
 }
 
-.footer {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 4;
-  grid-row-end: 5;
-
-  display: flex;
-  color: white;
-}
-
 .stat {
   grid-column-start: 3;
   grid-column-end: 4;
@@ -128,5 +118,60 @@ nav {
 
   .point-petit {
     @include icone("../../images/circle-solid.svg", 0.2rem, 0.25rem, -0.3rem);
+  }
+}
+
+.footer {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+
+  display: flex;
+  align-items: center;
+  color: white;
+
+  .selecteur {
+    display: flex;
+    font-family: "Mukta", sans-serif;
+    font-size: 1.8rem;
+    align-items: center;
+    margin: 0 5.7rem;
+
+    img {
+      width: 1.5rem;
+    }
+
+    span:nth-child(2) {
+      margin-left: 10px;
+    }
+
+    span:nth-child(4) {
+      margin-right: 10px;
+    }
+
+    .bar {
+      width: 22.6rem;
+      height: 0.2rem;
+      border-radius: 1rem;
+      position: relative;
+      background: #fff;
+      margin: 0 40px;
+
+      .pourcentage {
+        background: #a75b12;
+        position: relative;
+        width: 14rem;
+        height: 0.2rem;
+        border-radius: 1rem;
+      }
+    }
+  }
+
+  .description {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 2.4rem;
   }
 }

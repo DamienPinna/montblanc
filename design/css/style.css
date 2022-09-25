@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@500;600;700;800&display=swap");
 *,
 *::before,
@@ -90,15 +90,6 @@ nav ul {
   justify-self: end;
 }
 
-.footer {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 4;
-  grid-row-end: 5;
-  display: flex;
-  color: white;
-}
-
 .stat {
   grid-column-start: 3;
   grid-column-end: 4;
@@ -153,6 +144,53 @@ nav ul {
   width: 0.2rem;
   margin: 0 0.25rem;
   transform: translateY(-0.3rem);
+}
+
+.footer {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.footer .selecteur {
+  display: flex;
+  font-family: "Mukta", sans-serif;
+  font-size: 1.8rem;
+  align-items: center;
+  margin: 0 5.7rem;
+}
+.footer .selecteur img {
+  width: 1.5rem;
+}
+.footer .selecteur span:nth-child(2) {
+  margin-left: 10px;
+}
+.footer .selecteur span:nth-child(4) {
+  margin-right: 10px;
+}
+.footer .selecteur .bar {
+  width: 22.6rem;
+  height: 0.2rem;
+  border-radius: 1rem;
+  position: relative;
+  background: #fff;
+  margin: 0 40px;
+}
+.footer .selecteur .bar .pourcentage {
+  background: #a75b12;
+  position: relative;
+  width: 14rem;
+  height: 0.2rem;
+  border-radius: 1rem;
+}
+.footer .description {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */
