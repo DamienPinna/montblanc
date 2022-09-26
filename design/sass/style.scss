@@ -8,6 +8,8 @@ main {
   grid-template-columns: 70% 1fr 2fr;
   grid-template-rows: 15vh 20vh 1fr 20vh;
   background-color: #030303;
+  max-width: 1560px;
+  margin: 0 auto;
 }
 
 nav {
@@ -136,7 +138,8 @@ nav {
     font-family: "Mukta", sans-serif;
     font-size: 1.8rem;
     align-items: center;
-    margin: 0 5.7rem;
+    margin: 0 5% 0 3%;
+    flex-basis: 226px;
 
     img {
       width: 1.5rem;
@@ -173,5 +176,10 @@ nav {
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 2.4rem;
+    margin-right: 5.7rem;
+  }
+
+  & > img {
+    height: 100%;
   }
 }
