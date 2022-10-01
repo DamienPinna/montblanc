@@ -9,3 +9,10 @@
   margin: 0 $margin;
   transform: translateY($translateY);
 }
+
+//MIXIN BREACKPOINT
+@mixin breackpoint($breackpoint) {
+  @media screen and (max-width: $breackpoint) {
+    @content;
+  }
+}

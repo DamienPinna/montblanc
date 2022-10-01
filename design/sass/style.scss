@@ -3,6 +3,30 @@
 @import "_mixin.scss";
 @import "_animation.scss";
 
+.information-taille-ecran {
+  display: none;
+
+  @include breackpoint(1232px) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 1;
+    font-size: clamp(20px, 7vw, 50px);
+    text-shadow: 1px 0 10px black;
+  }
+}
+
+.container {
+  @include breackpoint(1232px) {
+    filter: blur(4px);
+  }
+}
+
 main {
   display: grid;
   height: 100vh;
@@ -11,6 +35,7 @@ main {
   background-color: #030303;
   max-width: 1560px;
   margin: 0 auto;
+  position: relative;
 }
 
 nav {
@@ -213,11 +238,13 @@ nav {
   }
 
   .description {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem;
-    line-height: 2.4rem;
-    margin-right: 5.7rem;
+    p {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 300;
+      font-size: 1.2rem;
+      line-height: 2.4rem;
+      margin-right: 5.7rem;
+    }
   }
 
   & > img {

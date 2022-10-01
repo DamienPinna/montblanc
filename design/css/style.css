@@ -37,6 +37,31 @@ ul {
     transform: rotate(360deg);
   }
 }
+.information-taille-ecran {
+  display: none;
+}
+@media screen and (max-width: 1232px) {
+  .information-taille-ecran {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 1;
+    font-size: clamp(20px, 7vw, 50px);
+    text-shadow: 1px 0 10px black;
+  }
+}
+
+@media screen and (max-width: 1232px) {
+  .container {
+    filter: blur(4px);
+  }
+}
+
 main {
   display: grid;
   height: 100vh;
@@ -45,6 +70,7 @@ main {
   background-color: #030303;
   max-width: 1560px;
   margin: 0 auto;
+  position: relative;
 }
 
 nav {
@@ -233,7 +259,7 @@ nav ul li:hover::after {
   height: 0.2rem;
   border-radius: 1rem;
 }
-.footer .description {
+.footer .description p {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
