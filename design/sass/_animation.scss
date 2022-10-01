@@ -6,3 +6,49 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes fadeInTop {
+  from {
+    transform: translateY(-40px);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInBottom {
+  from {
+    transform: translateY(40px);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(90px);
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-90px);
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes apparitionImage {
+  100% {
+    transform: scale(1);
+  }
+}

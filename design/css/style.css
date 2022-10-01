@@ -17,6 +17,8 @@ html {
 body {
   font-size: 1.6rem;
   background-color: #030303;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 a {
@@ -37,10 +39,51 @@ ul {
     transform: rotate(360deg);
   }
 }
+@keyframes fadeInTop {
+  from {
+    transform: translateY(-40px);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeInBottom {
+  from {
+    transform: translateY(40px);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    transform: translateX(90px);
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-90px);
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes apparitionImage {
+  100% {
+    transform: scale(1);
+  }
+}
 .information-taille-ecran {
   display: none;
 }
-@media screen and (max-width: 1232px) {
+@media screen and (max-width: 1280px) {
   .information-taille-ecran {
     display: block;
     position: absolute;
@@ -56,7 +99,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 1232px) {
+@media screen and (max-width: 1280px) {
   .container {
     filter: blur(4px);
   }
@@ -80,6 +123,8 @@ nav {
   grid-row-end: 2;
   display: flex;
   align-items: center;
+  opacity: 0;
+  animation: 500ms ease-in-out forwards fadeInTop;
 }
 nav .logo {
   width: 20%;
@@ -142,19 +187,25 @@ nav ul li:hover::after {
   max-width: 100%;
   max-height: 100%;
   justify-self: center;
+  transform: scale(0);
+  animation: 600ms ease-in-out forwards apparitionImage;
+  z-index: 0;
 }
 .content .container .circle {
   position: absolute;
   top: 3rem;
   right: 0;
   width: 16.5rem;
-  animation: rotation 40s linear infinite;
+  animation: 40s linear infinite rotation;
 }
 .content .container .vector {
   position: absolute;
   bottom: 0;
   margin-left: 0.1rem;
   max-width: 133%;
+  opacity: 0;
+  animation: 500ms ease-in-out 500ms forwards fadeInLeft;
+  z-index: 1;
 }
 .content img:nth-child(2) {
   max-width: 100%;
@@ -174,6 +225,8 @@ nav ul li:hover::after {
   flex-direction: column;
   justify-content: space-between;
   margin: 5rem 2rem;
+  opacity: 0;
+  animation: 500ms ease-in-out 300ms forwards fadeInRight;
 }
 .stat ul {
   margin: auto 0 auto 1.5rem;
@@ -234,6 +287,8 @@ nav ul li:hover::after {
   align-items: center;
   margin: 0 5% 0 3%;
   flex-basis: 226px;
+  opacity: 0;
+  animation: 500ms ease-in-out 400ms forwards fadeInBottom;
 }
 .footer .selecteur img {
   width: 1.5rem;
@@ -265,6 +320,8 @@ nav ul li:hover::after {
   font-size: 1.2rem;
   line-height: 2.4rem;
   margin-right: 5.7rem;
+  opacity: 0;
+  animation: 500ms ease-in-out forwards fadeInBottom;
 }
 .footer > img {
   height: 100%;
