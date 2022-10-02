@@ -80,6 +80,16 @@ ul {
     transform: scale(1);
   }
 }
+@keyframes apparitionColors {
+  from {
+    filter: grayscale(100%);
+    opacity: 0.1;
+  }
+  to {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+}
 .information-taille-ecran {
   display: none;
 }
@@ -100,7 +110,7 @@ ul {
 }
 
 @media screen and (max-width: 1280px) {
-  .container {
+  .main-container {
     filter: blur(4px);
   }
 }
@@ -169,6 +179,7 @@ nav ul li:hover::after {
   background-image: url(../../images/bg_gold.png);
   background-repeat: no-repeat;
   background-size: cover;
+  animation: 1s ease-in forwards apparitionColors;
 }
 
 .content {
@@ -207,10 +218,12 @@ nav ul li:hover::after {
   animation: 500ms ease-in-out 500ms forwards fadeInLeft;
   z-index: 1;
 }
-.content img:nth-child(2) {
+.content img:nth-last-child(1) {
   max-width: 100%;
   max-height: 100%;
   justify-self: end;
+  opacity: 0;
+  animation: 500ms ease-in-out 500ms forwards fadeInRight;
 }
 
 .stat {
@@ -325,6 +338,8 @@ nav ul li:hover::after {
 }
 .footer > img {
   height: 100%;
+  opacity: 0;
+  animation: 500ms ease-in-out 600ms forwards fadeInRight;
 }
 
 /*# sourceMappingURL=style.css.map */
