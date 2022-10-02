@@ -1,13 +1,14 @@
 {
   "name": "site_montblanc",
   "version": "1.0.0",
-  "description": "",
+  "description": "Intégration d'une maquette",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./design/sass/:./design/css/ --style expanded",
     "prefix": "postcss ./design/css/style.css --use autoprefixer -d ./design/css/prefixed/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "browserslist": "last 4 versions",
+  "author": "Damien PINNA",
   "license": "ISC"
 }
