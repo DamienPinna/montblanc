@@ -126,7 +126,9 @@ nav {
       top: 3rem;
       right: 0;
       width: 16.5rem;
-      animation: 40s linear infinite rotation;
+      transform: scale(0);
+      animation: 700ms linear forwards apparitionImage,
+        40s linear 700ms infinite rotation;
       z-index: 1;
     }
 
